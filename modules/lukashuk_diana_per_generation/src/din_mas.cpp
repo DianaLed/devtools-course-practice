@@ -15,12 +15,11 @@ dinmas::dinmas() {
 
 dinmas::dinmas(const dinmas& a) {
   m_size = a.m_size;
-  if (m_data == NULL) m_data;
   if (m_size != 0)
     m_data = new int[m_size];
   else
     m_data = 0;
-  for (int i = 0; i < m_size; ++i) m_data[i] = a.m_data[i];
+  for (int i = 0; i < m_size; i++) m_data[i] = a.m_data[i];
 }
 
 dinmas::dinmas(int size) {
