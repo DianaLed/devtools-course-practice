@@ -89,6 +89,7 @@ void PerGeneration::PG_work() {
     }
   }
   rs = 0;
+  point_t = add(*this);
   for (int i = 0; i < size_pair && rs < factorial(inp.size()); i++) {
     if (!have_in_res(new_res[rs])) res[i] = new_res[rs];
     rs++;
