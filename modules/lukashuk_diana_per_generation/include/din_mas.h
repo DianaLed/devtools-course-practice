@@ -1,19 +1,19 @@
 // Copyright 2022 Lukashuk Diana
 
-#ifndef MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_DIN_MAS_H_
-#define MODULES_LUKASHUK_D_LAB2_INCLUDE_DIN_MAS_H_
+#ifndef MODULES_LUKASHUK_D_DINMAS_H_
+#define MODULES_LUKASHUK_D_DINMAS_H_
 #include <iostream>
 #include <ostream>
 
-class din_mas {
+class dinmas {
  private:
   int m_size;
   int* m_data;
 
  public:
-  din_mas();
-  din_mas(const din_mas& a);
-  explicit din_mas(int size);
+  dinmas();
+  dinmas(const dinmas& a);
+  explicit dinmas(int size);
 
   int min_elem();
   void resize(int size);
@@ -23,11 +23,11 @@ class din_mas {
   int size() const;
   int& operator[](int i);
   bool have_this_el(int a);
-  din_mas operator=(din_mas mc);
-  bool operator==(const din_mas& a);
+  dinmas operator=(dinmas mc);
+  bool operator==(const dinmas& a);
 
-  ~din_mas();
+  ~dinmas();
 };
 //  std::ostream& operator << (std::ostream& out,  din_mas& a);
 
-#endif  // MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_DIN_MAS_H_
+#endif  // MODULES_LUKASHUK_D_DINMAS_H_

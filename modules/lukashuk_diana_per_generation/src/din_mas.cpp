@@ -7,12 +7,12 @@
 #include <limits>
 #include <string>
 
-din_mas::din_mas() {
+dinmas::dinmas() {
   m_size = 0;
   m_data = NULL;
 }
 
-din_mas::din_mas(const din_mas& a) {
+dinmas::dinmas(const dinmas& a) {
   m_size = a.m_size;
   if (m_data == NULL) m_data;
   if (m_size != 0)
@@ -22,7 +22,7 @@ din_mas::din_mas(const din_mas& a) {
   for (int i = 0; i < m_size; ++i) m_data[i] = a.m_data[i];
 }
 
-din_mas::din_mas(int size) {
+dinmas::dinmas(int size) {
   m_size = size;
   if (size != 0)
     m_data = new int[size];
@@ -30,7 +30,7 @@ din_mas::din_mas(int size) {
     m_data = NULL;
 }
 
-int din_mas::min_elem() {
+int dinmas::min_elem() {
   if (m_size > 0) {
     int res = m_data[0];
     for (int i = 1; i < m_size; i++) {
@@ -41,7 +41,7 @@ int din_mas::min_elem() {
   return 0;
 }
 
-void din_mas::resize(int size) {
+void dinmas::resize(int size) {
   if (size != m_size) {
     int new_capacity = std::max(size, m_size * 2);
     int* new_data = new int[new_capacity];
@@ -52,9 +52,9 @@ void din_mas::resize(int size) {
   m_size = size;
 }
 
-void din_mas::del_elem(int nom) {
+void dinmas::del_elem(int nom) {
   if (nom >= 0 && nom < m_size) {
-    din_mas d_new(m_size - 1);
+    dinmas d_new(m_size - 1);
     int j = 0;
     for (int i = 0; i < m_size; i++) {
       if (i != nom) {
@@ -69,7 +69,7 @@ void din_mas::del_elem(int nom) {
   }
 }
 
-void din_mas::del_elem_zn(int chislo) {
+void dinmas::del_elem_zn(int chislo) {
   for (int i = 0; i < m_size; i++) {
     if (m_data[i] == chislo) {
       this->del_elem(i);
@@ -78,23 +78,23 @@ void din_mas::del_elem_zn(int chislo) {
   }
 }
 
-void din_mas::push_back(int val) {
+void dinmas::push_back(int val) {
   resize(m_size + 1);
   m_data[m_size - 1] = val;
 }
 
-int din_mas::size() const { return m_size; }
+int dinmas::size() const { return m_size; }
 
-int& din_mas::operator[](int i) { return m_data[i]; }
+int& dinmas::operator[](int i) { return m_data[i]; }
 
-bool din_mas::have_this_el(int a) {
+bool dinmas::have_this_el(int a) {
   for (int i = 0; i < m_size; i++) {
     if (a == m_data[i]) return 1;
   }
   return 0;
 }
 
-din_mas din_mas::operator=(din_mas mc) {
+dinmas dinmas::operator=(dinmas mc) {
   if (m_data) delete[] m_data;
   m_size = mc.m_size;
   m_data = new int[m_size];
@@ -102,7 +102,7 @@ din_mas din_mas::operator=(din_mas mc) {
   return *this;
 }
 
-bool din_mas::operator==(const din_mas& a) {
+bool dinmas::operator==(const dinmas& a) {
   if (a.m_size != m_size) return false;
   for (int i = 0; i < a.m_size; i++) {
     if (a.m_data[i] != m_data[i]) return false;
@@ -110,7 +110,7 @@ bool din_mas::operator==(const din_mas& a) {
   return true;
 }
 
-din_mas::~din_mas() {
+dinmas::~dinmas() {
   if (m_data) delete[] m_data;
 }
 

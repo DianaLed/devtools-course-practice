@@ -8,8 +8,8 @@
 TEST(Diana_Test_of_array, Array_const_push_back) {
   // Arrange
   // Act
-  din_mas a(0);
-  din_mas v();
+  dinmas a(0);
+  dinmas v();
   a.push_back(10);
   a.push_back(2);
   // Assert , a[1]
@@ -19,7 +19,7 @@ TEST(Diana_Test_of_array, Array_const_push_back) {
 }
 
 TEST(Diana_Test_of_array, Array_resize1) {
-  din_mas a(0), b(1), c(2), d(3);
+  dinmas a(0), b(1), c(2), d(3);
   a.resize(1);
   b.resize(1);
   c.resize(2);
@@ -31,7 +31,7 @@ TEST(Diana_Test_of_array, Array_resize1) {
 }
 
 TEST(Diana_Test_of_array, Array_brackets) {
-  din_mas a(0);
+  dinmas a(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
@@ -43,8 +43,8 @@ TEST(Diana_Test_of_array, Array_brackets) {
 }
 
 TEST(Diana_Test_of_array, Array_equalsand_equality) {
-  din_mas a(0), c(2);
-  din_mas b(0);
+  dinmas a(0), c(2);
+  dinmas b(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
@@ -55,7 +55,7 @@ TEST(Diana_Test_of_array, Array_equalsand_equality) {
 }
 
 TEST(Diana_Test_of_array, Array_delete_element) {
-  din_mas a(0), c(0);
+  dinmas a(0), c(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
@@ -71,7 +71,7 @@ TEST(Diana_Test_of_array, Array_delete_element) {
 }
 
 TEST(Diana_Test_of_array, Array_delete_element_zn) {
-  din_mas a(0), c(0);
+  dinmas a(0), c(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
@@ -85,7 +85,7 @@ TEST(Diana_Test_of_array, Array_delete_element_zn) {
 }
 
 TEST(Diana_Test_of_array, Array_min_element) {
-  din_mas a(0), c(0);
+  dinmas a(0), c(0);
   a.push_back(1);
   a.push_back(1);
   a.push_back(2);
@@ -98,7 +98,7 @@ TEST(Diana_Test_of_array, Array_min_element) {
 }
 
 TEST(Diana_Test_of_array, Array_have_element) {
-  din_mas a(0), c(0);
+  dinmas a(0), c(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
@@ -109,19 +109,19 @@ TEST(Diana_Test_of_array, Array_have_element) {
 }
 
 TEST(Test_of_PerGeneration, chekc_const_and_size_pair) {
-  din_mas a(0);
+  dinmas a(0);
   a.push_back(1);
   a.push_back(2);
   a.push_back(3);
   PerGeneration pg(a);
 
-  din_mas b;
+  dinmas b;
   b.push_back(0);
   b.push_back(0);
   b.push_back(2);
   b.push_back(2);
 
-  din_mas c(0);
+  dinmas c(0);
 
   PerGeneration pgb(b);
   PerGeneration pgc(c);
@@ -134,12 +134,12 @@ TEST(Test_of_PerGeneration, chekc_const_and_size_pair) {
 }
 
 TEST(Test_of_PerGeneration, have_in_res) {
-  din_mas a(0);
+  dinmas a(0);
   a.push_back(0);
   a.push_back(1);
   PerGeneration pg(a);
   pg.PG_work();
-  din_mas a1;
+  dinmas a1;
   a1.push_back(1);
   a1.push_back(0);
   EXPECT_EQ(pg.have_in_res(a), 1);
@@ -147,14 +147,14 @@ TEST(Test_of_PerGeneration, have_in_res) {
 }
 
 TEST(Test_of_PerGeneration, PG_work_1) {
-  din_mas a(0);
+  dinmas a(0);
   a.push_back(0);
   a.push_back(1);
   PerGeneration pg(a);
 
   pg.PG_work();
 
-  din_mas res[2];
+  dinmas res[2];
   res[0].push_back(0);
   res[0].push_back(1);
   res[1].push_back(1);
@@ -166,11 +166,11 @@ TEST(Test_of_PerGeneration, PG_work_1) {
 }
 
 TEST(Test_of_PerGeneration, PG_work_2) {
-  din_mas a(0);
+  dinmas a(0);
   PerGeneration pg(a);
 
   pg.PG_work();
-  din_mas res;
+  dinmas res;
   EXPECT_EQ(pg.get_size_pair(), 0);
   EXPECT_EQ(pg.have_in_res(res), 0);
 }

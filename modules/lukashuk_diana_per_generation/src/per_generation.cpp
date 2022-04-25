@@ -10,7 +10,7 @@
 void PerGeneration::inp_size_pair() {
   int res = 1;
   int resinwhile = 1;
-  din_mas copy;
+  dinmas copy;
   copy = inp;
   while (copy.size() != 0) {
     for (int i = 1; i < copy.size(); i++) {
@@ -34,10 +34,10 @@ PerGeneration::PerGeneration() {
   size_pair = 0;
 }
 
-PerGeneration::PerGeneration(din_mas input) {
+PerGeneration::PerGeneration(dinmas input) {
   inp = input;
   inp_size_pair();
-  res = new din_mas[size_pair];
+  res = new dinmas[size_pair];
 }
 
 PerGeneration::PerGeneration(const PerGeneration& a) {
@@ -49,14 +49,14 @@ PerGeneration::PerGeneration(const PerGeneration& a) {
   size_pair = a.size_pair;
 }
 
-din_mas PerGeneration::get_res(int index) {
+dinmas PerGeneration::get_res(int index) {
   if (index >= 0 && index < size_pair) return res[index];
-  return din_mas();
+  return dinmas();
 }
 
 int PerGeneration::get_size_pair() { return size_pair; }
 
-bool PerGeneration::have_in_res(din_mas n) {
+bool PerGeneration::have_in_res(dinmas n) {
   for (int a = 0; a < size_pair; a++) {
     if (res[a] == n) return 1;
   }
@@ -67,8 +67,8 @@ void PerGeneration::PG_work() {
   int size_inp_t = inp.size();
   int point_t = 0;
   int rs = 0;
-  din_mas* new_res = new din_mas[factorial(inp.size())];
-  din_mas copy_time;
+  dinmas* new_res = new dinmas[factorial(inp.size())];
+  dinmas copy_time;
   int min_c;
   while (size_inp_t != 0) {
     rs = factorial(size_inp_t - 1);
