@@ -1,7 +1,7 @@
 // Copyright 2022 Lukashuk Diana
 
-#ifndef MODULES_LUKASHUK_D_INCLUDE_PER_GENERATION_H_
-#define MODULES_LUKASHUK_D_INCLUDE_PER_GENERATION_H_
+#ifndef MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_PER_GENERATION_H_
+#define MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_PER_GENERATION_H_
 
 #include "include/din_mas.h"
 
@@ -29,4 +29,4 @@ class PerGeneration {
 // std::ostream& operator << (std::ostream& out, PerGeneration& a);
 int factorial(int num);
 
-#endif  // MODULES_LUKASHUK_D_INCLUDE_PER_GENERATION_H_
+#endif  // MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_PER_GENERATION_H_
