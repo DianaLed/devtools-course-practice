@@ -168,7 +168,7 @@ TEST(Test_of_PerGeneration, PG_work_1) {
 TEST(Test_of_PerGeneration, PG_work_2) {
   dinmas a(0);
   PerGeneration pg(a);
-
+  int d = add(pg);
   pg.PG_work();
   dinmas res;
   EXPECT_EQ(pg.get_size_pair(), 0);
@@ -176,6 +176,6 @@ TEST(Test_of_PerGeneration, PG_work_2) {
 }
 
 TEST(Test_of_PerGeneration, PG_const_cop) {
-  dinmas a(0);
+  dinmas a;
   ASSERT_NO_THROW(PerGeneration(PerGeneration(a)));
 }

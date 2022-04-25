@@ -6,7 +6,6 @@
 
 #include <limits>
 #include <string>
-#include <algorithm>
 
 dinmas::dinmas() {
   m_size = 0;
@@ -14,12 +13,10 @@ dinmas::dinmas() {
 }
 
 dinmas::dinmas(const dinmas& a) {
+  if (m_size > 0) delete[] m_data;
   m_size = a.m_size;
-  if (m_size != 0)
-    m_data = new int[m_size];
-  else
-    m_data = 0;
-  for (int i = 0; i < m_size; i++) m_data[i] = a.m_data[i];
+  m_data = new int[m_size];
+  for (int i = 0; i < m_size; ++i) m_data[i] = a.m_data[i];
 }
 
 dinmas::dinmas(int size) {
@@ -95,7 +92,7 @@ bool dinmas::have_this_el(int a) {
 }
 
 dinmas dinmas::operator=(dinmas mc) {
-  if (m_data) delete[] m_data;
+  if (m_size > 0) delete[] m_data;
   m_size = mc.m_size;
   m_data = new int[m_size];
   for (int i = 0; i < m_size; i++) m_data[i] = mc.m_data[i];
@@ -112,6 +109,7 @@ bool dinmas::operator==(const dinmas& a) {
 
 dinmas::~dinmas() {
   if (m_data) delete[] m_data;
+  m_size = 0;
 }
 
 // std::ostream& operator<<(std::ostream& out, din_mas& a) {

@@ -26,5 +26,6 @@ class PerGeneration {
 };
 // std::ostream& operator << (std::ostream& out, PerGeneration& a);
 int factorial(int num);
+int add(PerGeneration b);
 
 #endif  // MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_PER_GENERATION_H_

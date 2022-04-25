@@ -42,11 +42,12 @@ PerGeneration::PerGeneration(dinmas input) {
 
 PerGeneration::PerGeneration(const PerGeneration& a) {
   inp = a.inp;
-  if (res != NULL) delete[] res;
+  if (size_pair > 0) delete[] res;
+  size_pair = a.size_pair;
+  res = new dinmas[size_pair];
   for (int i = 0; i < a.inp.size(); i++) {
     res[i] = a.res[i];
   }
-  size_pair = a.size_pair;
 }
 
 int PerGeneration::get_size_pair() { return size_pair; }
@@ -103,4 +104,10 @@ int factorial(int num) {
   int res = 1;
   for (int i = num; i > 1; i--) res = res * i;
   return res;
+}
+
+int add(PerGeneration b) {
+  int a = 0;
+  if (b.get_size_pair() != 0) a++;
+  return a;
 }
