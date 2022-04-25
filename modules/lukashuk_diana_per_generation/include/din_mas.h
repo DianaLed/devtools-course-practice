@@ -1,6 +1,6 @@
 // Copyright 2022 Lukashuk Diana
 
-#ifndef MODULES_LUKASHUK_D_LAB2_INCLUDE_DIN_MAS_H_
+#ifndef MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_DIN_MAS_H_
 #define MODULES_LUKASHUK_D_LAB2_INCLUDE_DIN_MAS_H_
 #include <iostream>
 #include <ostream>
@@ -30,4 +30,4 @@ class din_mas {
 };
 //  std::ostream& operator << (std::ostream& out,  din_mas& a);
 
-#endif  // MODULES_LUKASHUK_D_LAB2_INCLUDE_DIN_MAS_H_
+#endif  // MODULES_LUKASHUK_DIANA_PER_GENERATION_INCLUDE_DIN_MAS_H_
