@@ -174,3 +174,8 @@ TEST(Test_of_PerGeneration, PG_work_2) {
   EXPECT_EQ(pg.get_size_pair(), 0);
   EXPECT_EQ(pg.have_in_res(res), 0);
 }
+
+TEST(Test_of_PerGeneration, PG_const_cop) {
+  dinmas a(0);
+  ASSERT_NO_THROW(PerGeneration(PerGeneration(a)));
+}

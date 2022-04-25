@@ -49,11 +49,6 @@ PerGeneration::PerGeneration(const PerGeneration& a) {
   size_pair = a.size_pair;
 }
 
-dinmas PerGeneration::get_res(int index) {
-  if (index >= 0 && index < size_pair) return res[index];
-  return dinmas();
-}
-
 int PerGeneration::get_size_pair() { return size_pair; }
 
 bool PerGeneration::have_in_res(dinmas n) {

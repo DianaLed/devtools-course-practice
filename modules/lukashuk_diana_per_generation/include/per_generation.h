@@ -18,8 +18,6 @@ class PerGeneration {
   explicit PerGeneration(dinmas input);
   PerGeneration(const PerGeneration& a);
 
-  dinmas get_res(int index);
-
   int get_size_pair();
   bool have_in_res(dinmas n);
   void PG_work();
