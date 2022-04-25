@@ -6,6 +6,7 @@
 
 #include <limits>
 #include <string>
+#include <algorithm>
 
 dinmas::dinmas() {
   m_size = 0;
