@@ -34,11 +34,10 @@ void PermutationGeneration::do_res() {
   }
   int point;
   int nom_min;
-  for (int column = 0; column < size_inp; column++) {  //по столбикам
+  for (int column = 0; column < size_inp; column++) {
     point = 0;
     nom_min = 0;
     while (point != size_res) {
-      //выбираем разрешенный минимум
       for (int found_nom_min = 0; found_nom_min < column; found_nom_min++) {
         if (inp[nom_min] == res[point][found_nom_min]) {
           nom_min++;
@@ -46,7 +45,7 @@ void PermutationGeneration::do_res() {
           found_nom_min = 0;  // 21
         }
       }
-      for (int a = 0; a < size_level[column]; a++) {  //по количеству записываем
+      for (int a = 0; a < size_level[column]; a++) {
         res[point][column] = inp[nom_min];
         point++;
       }
