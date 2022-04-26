@@ -72,11 +72,6 @@ PermutationGeneration::PermutationGeneration(int* input, int size) {
         res[i][j] = 9;
       }
     }
-  } else {
-    size_inp = 0;
-    size_res = 0;
-    inp = NULL;
-    res = NULL;
   }
 }
 

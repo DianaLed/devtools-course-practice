@@ -33,7 +33,7 @@ TEST(Lukashuk_Diana_Memory_Test, check_dm_and_size_constructor) {
 TEST(Lukashuk_Diana_Memory_Test, check_constructor_cop) {
   int *in = new int[3]{0, 1, 2};
   PermutationGeneration a(in, 3);
-  PermutationGeneration b(in, -1);
+  PermutationGeneration b;
   delete[] in;
   ASSERT_NO_THROW(test_constr_cop(a));
   ASSERT_NO_THROW(test_constr_cop(b));
