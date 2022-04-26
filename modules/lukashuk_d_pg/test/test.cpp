@@ -25,9 +25,10 @@ TEST(Lukashuk_Diana_Memory_Test, check_defolt_constructor) {
 TEST(Lukashuk_Diana_Memory_Test, check_dm_and_size_constructor) {
   int *in = new int[3]{0, 1, 2};
   PermutationGeneration a(in, 3);
-  PermutationGeneration b(in, -1);
+  PermutationGeneration b;
   delete[] in;
   EXPECT_EQ(a.get_size_inp(), 3);
+  EXPECT_EQ(b.get_size_inp(), 0);
 }
 
 TEST(Lukashuk_Diana_Memory_Test, check_constructor_cop) {
