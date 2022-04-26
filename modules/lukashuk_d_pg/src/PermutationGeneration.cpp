@@ -76,12 +76,6 @@ PermutationGeneration::PermutationGeneration(int* input, int size) {
 }
 
 PermutationGeneration::PermutationGeneration(const PermutationGeneration& pg) {
-  if (size_inp > 0) {
-    delete[] inp;
-    for (int i = 0; i < size_res; i++) delete[] res[size_inp];
-    size_inp = 0;
-    size_res = 0;
-  }
     if (pg.size_inp > 0) {
       size_inp = pg.size_inp;
       inp = new int[size_inp];

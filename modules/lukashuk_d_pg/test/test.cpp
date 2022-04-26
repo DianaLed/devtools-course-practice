@@ -116,8 +116,11 @@ TEST(Lukashuk_Diana_functions, res_pg) {
   {
     int *in = new int[3]{0, 1, 2};
     PermutationGeneration a(in, 3);
+    PermutationGeneration b;
+
     a.do_res();
     int **r = a.get_res();
+    int **r1 = b.get_res();
 
     int **res = new int *[a.get_size_res()];
     res[0] = new int[a.get_size_inp()]{0, 1, 2};
@@ -127,6 +130,7 @@ TEST(Lukashuk_Diana_functions, res_pg) {
     res[4] = new int[a.get_size_inp()]{2, 0, 1};
     res[5] = new int[a.get_size_inp()]{2, 1, 0};
     EXPECT_EQ(a.get_size_res(), 6);
+    EXPECT_EQ(r1, nullptr);
     EXPECT_TRUE(equality(r[0], res[0], a.get_size_inp()));
     EXPECT_TRUE(equality(r[1], res[1], a.get_size_inp()));
     EXPECT_TRUE(equality(r[2], res[2], a.get_size_inp()));
