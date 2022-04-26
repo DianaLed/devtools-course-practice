@@ -8,6 +8,15 @@
 
 #include "include/PermutationGeneration.h"
 
+bool equality(int *mas1, int *mas2, int size) {
+  for (int i = 0; i < size; i++) {
+    if (mas1[i] != mas2[i]) return false;
+  }
+  return true;
+}
+
+PermutationGeneration test_constr_cop(PermutationGeneration pg) { return pg; }
+
 TEST(Lukashuk_Diana_Memory_Test, check_defolt_constructor) {
   PermutationGeneration a;
   EXPECT_EQ(a.get_size_inp(), 0);

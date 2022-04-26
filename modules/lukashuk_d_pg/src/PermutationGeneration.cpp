@@ -10,14 +10,11 @@
 
 void sort_mas(int* mas, int size) {
   if (size > 0) {
-    int min_el;
     int dop;
     for (int i = 0; i < size - 1; i++) {
-      min_el = mas[i];
       for (int j = i + 1; j < size; j++) {
-        if (min_el > mas[j]) {
+        if (mas[i] > mas[j]) {
           dop = mas[i];
-          min_el = mas[j];
           mas[i] = mas[j];
           mas[j] = dop;
         }
@@ -32,11 +29,9 @@ void PermutationGeneration::do_res() {
   for (int i = 0; i < size_inp; i++) {
     size_level[i] = factorial(size_inp - i - 1);
   }
-  int point;
-  int nom_min;
   for (int column = 0; column < size_inp; column++) {
-    point = 0;
-    nom_min = 0;
+    int point = 0;
+    int nom_min = 0;
     while (point != size_res) {
       for (int found_nom_min = 0; found_nom_min < column; found_nom_min++) {
         if (inp[nom_min] == res[point][found_nom_min]) {
@@ -53,6 +48,7 @@ void PermutationGeneration::do_res() {
       if (nom_min == size_inp) nom_min = 0;
     }
   }
+  delete[] size_level;
 }
 
 PermutationGeneration::PermutationGeneration() {
@@ -148,17 +144,8 @@ PermutationGeneration::~PermutationGeneration() {
   }
 }
 
-PermutationGeneration test_constr_cop(PermutationGeneration pg) { return pg; }
-
 int factorial(int number) {
   int result = 1;
   for (int i = number; i > 1; i--) result = result * i;
   return result;
-}
-
-bool equality(int* mas1, int* mas2, int size) {
-  for (int i = 0; i < size; i++) {
-    if (mas1[i] != mas2[i]) return false;
-  }
-  return true;
 }
