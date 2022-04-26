@@ -81,7 +81,7 @@ PermutationGeneration::PermutationGeneration(const PermutationGeneration& pg) {
     for (int i = 0; i < size_res; i++) delete[] res[size_inp];
     size_inp = 0;
     size_res = 0;
-  } else {
+  }
     if (pg.size_inp > 0) {
       size_inp = pg.size_inp;
       inp = new int[size_inp];
@@ -102,7 +102,6 @@ PermutationGeneration::PermutationGeneration(const PermutationGeneration& pg) {
       inp = NULL;
       res = NULL;
     }
-  }
 }
 
 int PermutationGeneration::get_size_inp() { return size_inp; }
