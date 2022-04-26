@@ -128,8 +128,6 @@ int** PermutationGeneration::get_res() {
   return nullptr;
 }
 
-int* PermutationGeneration::get_inp() { return inp; }
-
 PermutationGeneration::~PermutationGeneration() {
   if (size_inp > 0) {
     delete[] inp;

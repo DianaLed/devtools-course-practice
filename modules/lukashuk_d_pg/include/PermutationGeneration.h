@@ -21,7 +21,6 @@ class PermutationGeneration {
   int get_size_inp();
   int get_size_res();
   int** get_res();
-  int* get_inp();
 
   void viv() {
     for (int j = 0; j < size_res; j++) {
