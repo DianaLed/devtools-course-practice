@@ -1,4 +1,4 @@
-#include "..\include\PermutationGeneration.h"
+#include "include\PermutationGeneration.h"
 // Copyright 2022 Lukashuk Diana
 
 #include <cstdlib>
