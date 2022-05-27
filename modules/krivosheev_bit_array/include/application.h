@@ -27,4 +27,4 @@ class BitArrayApp {
   void CreateNewArray(unsigned int size);
 };
 
-#endif  // MODULES_CALCULATE_PRICE_INCLUDE_APPLICATION_H_
+#endif  // MODULES_KRIVOSHEEV_BIT_ARRAY_INCLUDE_APPLICATION_H_
