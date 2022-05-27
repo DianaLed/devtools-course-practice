@@ -9,9 +9,9 @@
 
 class BitArrayApp {
  public:
-   BitArray bit_arr;
-   std::string message_;
-  explicit BitArrayApp();
+  BitArray bit_arr;
+  std::string message_;
+  BitArrayApp();
   std::string operator()(int argc, const char** argv);
  private:
   bool ParseBitAraayToObj(std::string);

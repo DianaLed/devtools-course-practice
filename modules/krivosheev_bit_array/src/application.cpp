@@ -5,7 +5,7 @@
 #include "include/application.h"
 #include "include/bit_array.h"
 
-BitArrayApp::BitArrayApp() : message_(""), bit_arr() {}
+BitArrayApp::BitArrayApp() : message_("") {}
 
 void BitArrayApp::Help(std::string message) {
   message_ =
