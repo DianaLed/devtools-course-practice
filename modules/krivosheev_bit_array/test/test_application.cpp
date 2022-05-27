@@ -50,7 +50,7 @@ TEST_F(BitArrayAppTest, Is_Print_Help_Wgong_Count_Of_Arguments) {
 }
 
 TEST_F(BitArrayAppTest, Can_Array_Contains_Not_1_0) {
-  std::vector<std::string> args = { "105", "set", "1", "1" };
+  std::vector<std::string> args = { "106", "set", "1", "1" };
 
   Act(args);
 
