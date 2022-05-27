@@ -1,6 +1,6 @@
 // Copyright 2022 Likashuk Diana
 
-#ifndef  MODULES_KRIVOSHEEV_BIT_ARRAY_INCLUDE_APPLICATION_H_
+#ifndef MODULES_KRIVOSHEEV_BIT_ARRAY_INCLUDE_APPLICATION_H_
 #define MODULES_KRIVOSHEEV_BIT_ARRAY_INCLUDE_APPLICATION_H_
 
 #include <include/bit_array.h>
@@ -9,11 +9,11 @@
 
 class BitArrayApp {
  public:
-  BitArrayApp();
+   BitArray bit_arr;
+   std::string message_;
+  explicit BitArrayApp();
   std::string operator()(int argc, const char** argv);
  private:
-  BitArray bit_arr;
-  std::string message_;
   bool ParseBitAraayToObj(std::string);
   std::string BitArrayToString();
   void Help(std::string message = "");

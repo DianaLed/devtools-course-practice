@@ -20,7 +20,7 @@ void BitArrayApp::Help(std::string message) {
 bool BitArrayApp::ParseBitAraayToObj(std::string arr) {
   int N = arr.length();
   bit_arr.AllocateArray(N);
-  for (int i = 0; i < arr.size(); i++) {
+  for (unsigned int i = 0; i < arr.size(); i++) {
     if (arr[i] == '0') {
       bit_arr.SetBit(i, 0);
     } else if (arr[i] == '1') {
